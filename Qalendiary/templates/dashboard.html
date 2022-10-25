@@ -1,0 +1,10 @@
+{% load static %}
+
+{% block content %}
+<h1>Qalendiary</h1>
+<h2>Hola, {{user.username}}</h2>
+<a href="{% url 'subirobjetivo' %}">Subir objetivo</a>
+<a href="{% url 'verobjetivo' %}">Ver objetivo</a>
+<img src="{% static 'relojito.jpg' %">
+{% endblock %}
+

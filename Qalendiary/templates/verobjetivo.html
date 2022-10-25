@@ -1,0 +1,22 @@
+{% block content %}
+    {% block content1 %}
+        <h2>Qalendiary</h2>
+        <p>
+            <a href="{% url 'subirobjetivo' %}" class = "btn btn-primary">Subir objetivo</a>
+        </p>
+    {% endblock %}
+        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
+        <thead>
+            <tr>
+                <th id="modelo">Objetivos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Objetivo in lista_objetivo %}
+                <tr>
+                    <td>{{Objetivo}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

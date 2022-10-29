@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class ObjetivoForm(forms.ModelForm):
     class Meta:
         model=Objetivo
-        exclude=["fecha"]
+        exclude=["fecha","usuario"]
 
 class NewRegister(UserCreationForm):
     class Meta(UserCreationForm.Meta):

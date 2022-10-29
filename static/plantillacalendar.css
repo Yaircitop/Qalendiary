@@ -1,0 +1,22 @@
+.grid{
+    display:grid;
+    padding: 150px 50px;
+    width: 1000px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    transform: translate(40%);
+}
+
+.grid div{
+    background: #ecf0f1;
+    padding: 1em;
+}
+
+.grid div:hover{
+    border: 1px solid #f1c40f;
+    cursor: pointer;
+}
+#calendario{
+    font-size: 50px;
+    text-align: center;
+    transform: translateY(50px);
+}

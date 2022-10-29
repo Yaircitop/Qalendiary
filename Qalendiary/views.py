@@ -40,3 +40,7 @@ def registerView(request):
             form = NewRegister()
     
     return render(request,'registration/register.html',{'form':NewRegister})
+
+
+def calendarioView(request):
+    return render(request,'calendario.html')

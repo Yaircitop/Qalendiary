@@ -12,7 +12,7 @@
 
 <div class="sidenav">
     <div class="login-main-text">
-       <h2>Qalendiary<br> Página de registro porque fallé</h2>
+       <h2>Qalendiary<br> Página de registro</h2>
        <p>Crea tu cuenta</p>
     </div>
  </div>
@@ -27,14 +27,14 @@
              </div>
              <div class="form-group">
                 {{ form.password1|as_crispy_field }}
-                <p>*Tu contrase.</p>
-                <p>*Your password must contain at least 8 characters.</p>
-                <p>*Your password can't be a commonly used password.</p>
-                <p>*Your password can't be entirely numeric.</p>
+                <p>*Tu contraseña no debe ser similar a ninguna otra información personal.</p>
+                <p>*Tu contraseña debe contener almenos 8 caracteres.</p>
+                <p>*Tu contraseña no puede ser comunmente usada.</p>
+                <p>*Tu contraseña no pueden ser sólo números.</p>
              </div>
              <div class="form-group">
                 {{ form.password2|as_crispy_field }}
-                <p>*Enter the same password as before, for verification.</p>
+                <p>*Ingrese la misma contraseña anterior, para verificación.</p>
              </div>
              <button type="submit" class="btn btn-black">Regístrate</button>
           </form>

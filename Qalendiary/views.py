@@ -14,7 +14,7 @@ def subirobjetivo(request):
             instance = form.save(commit=False)
             instance.usuario = request.user.id
             instance.save()
-            return redirect("dashboard")
+            return redirect("verobjetivo")
     else:
         form=ObjetivoForm()
     return render(request, 'subirobjetivo.html',{
@@ -26,6 +26,12 @@ def verobjetivo(request):
     return render(request, 'verobjetivo.html', {
         'lista_objetivo': lista_objetivo
     })
+
+def borrarobjetivo(request, pk):
+    if request.method == "POST":
+        objetivo = Objetivo.objects.get(pk=pk)
+        objetivo.delete()
+    return redirect('verobjetivo')
 
 def indexView(request):
     return render(request,'index.html')

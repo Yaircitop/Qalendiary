@@ -1,12 +1,34 @@
 {% load static %}
 
 {% block content %}
-<h1>Qalendiary</h1>
-<h2>Hola, {{user.username}}</h2>
-<a href="{% url 'subirobjetivo' %}">Subir objetivo</a>
-<a href="{% url 'verobjetivo' %}">Ver objetivo</a>
-<a href="{% url 'calendario' %}">Ver calendario</a>
-<a href="{% url 'logout' %}">Cerrar sesión</a>
-<img src="{% static 'relojito.jpg' %}">
-{% endblock %}
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../static/popup.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <h1>Qalendiary</h1>
+    <h2>Hola, {{user.username}}</h2>
+    <a href="{% url 'subirobjetivo' %}">Subir objetivo</a>
+    <a href="{% url 'verobjetivo' %}">Ver objetivo</a>
+    <a href="{% url 'calendario' %}">Ver calendario</a>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+    <img src="{% static 'relojito.jpg' %}">
+    {% endblock %}
+	<input type="checkbox" id="btn-modal">
+	<label for="btn-modal" class="lbl-modal">¿Sabías que...?</label>
+	<div class="modal">
+		<div class="contenedor">
+			<header>¿Sabías que...?</header>
+			<label for="btn-modal">X</label>
+			<div class="contenido">
+				<h4>La gestión de tiempo</h4>
+				<p>Esta puede aumentar la productividad, pero la mayor ventaja de la gestión eficaz del tiempo es la capacidad de establecer correctamente las prioridades en tu día para hacer espacio para el descanso y el cuidado personal</p>
+                <img src="{% static 'relojito.jpg' %}">
+            </div>
+		</div>
+	</div>
+</body>
+</html>

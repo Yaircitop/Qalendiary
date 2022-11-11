@@ -9,18 +9,18 @@ const isLeapYear = (year) => {
   };
   let calendar = document.querySelector('.calendar');
   const month_names = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
   ];
   let month_picker = document.querySelector('#month-picker');
   const dayTextFormate = document.querySelector('.day-text-formate');
@@ -72,8 +72,10 @@ const isLeapYear = (year) => {
       let day = document.createElement('div');
   
       if (i >= first_day.getDay()) {
-        day.innerHTML = i - first_day.getDay() + 1;
-
+        n_dia= i - first_day.getDay() + 1
+        let texto=`<a href="../../Qalendiary/verobjetivos?d=${n_dia}&m=${month+1}&y=${year}">`+(n_dia)+'</a>';
+        //day.innerHTML = i - first_day.getDay() + 1;
+        day.innerHTML= texto;
         if (i - first_day.getDay() + 1 === currentDate.getDate() &&
           year === currentDate.getFullYear() &&
           month === currentDate.getMonth()

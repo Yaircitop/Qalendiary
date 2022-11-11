@@ -2,8 +2,12 @@
     {% block content1 %}
         <h2>Qalendiary</h2>
         <p>
+            {% if Hola == "sinfecha" %}
             <a href="{% url 'subirobjetivo' %}" class = "btn btn-primary">Subir objetivo</a>
-            <a href="{% url 'calendario' %}" class = "btn btn-primary">Atrás</a>
+            {% else %}
+            <a href="../subirobjetivo?d={{dia}}&m={{mes}}&y={{anio}}" class = "btn btn-primary">Subir objetivo</a>
+            {% endif %}
+            <a href="{% url 'calendario' %}" class = "btn btn-primary">Ver calendario</a>
         </p>
     {% endblock %}
         <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">

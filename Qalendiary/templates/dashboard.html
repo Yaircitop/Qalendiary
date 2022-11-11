@@ -5,6 +5,7 @@
 <h2>Hola, {{user.username}}.</h2>
 <a href="{% url 'calendario' %}">Ver calendario</a>
 <a href="{% url 'logout' %}">Cerrar sesión</a>
+<a href="{% url 'verobjetivo' %}" class = "btn btn-primary">Ver objetivo</a>
 <img src="{% static 'relojito.jpg' %}">
 {% endblock %}
 

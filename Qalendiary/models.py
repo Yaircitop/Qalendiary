@@ -5,3 +5,9 @@ class Objetivo(models.Model):
     usuario=models.CharField(max_length=100)
     objetivo=models.CharField(max_length=100)
     fecha=models.DateTimeField(auto_now=True)
+    fecha_obj=models.DateField()
+
+class Prueba(models.Model):
+    usuario=models.CharField(max_length=100)
+    objetivo=models.CharField(max_length=100)
+    fecha=models.DateTimeField(auto_now=True)

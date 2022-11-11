@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		return sonido;
 	};
 
-	const sonido = cargarSonido("timer.wav");
+	const sonido = cargarSonido('../../static/javascript/timer.mp3');
 	const ocultarElemento = elemento => {
 		elemento.style.display = "none";
 	}

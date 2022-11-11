@@ -6,6 +6,16 @@
     {% csrf_token %}
     <div class="form-group">
         {{ form.objetivo|as_crispy_field }}
+        <div id="div_id_fecha_obj" class="control-group">
+          <label for="id_fecha_obj" class="control-label requiredField">
+              Fecha obj<span class="asteriskField">*</span>
+          </label>
+          <div class="controls">
+            <input type="text" name="fecha_obj" class="dateinput" required="" id="id_fecha_obj"
+            value="{{fecha}}">
+          </div>
+        </div>
+        <h5>Formato: aaaa-mm-dd</h5>
     </div>
     <div class="text-center">
       <button type="submit" class="btn btn-primary mt-4">Subir objetivo</button>

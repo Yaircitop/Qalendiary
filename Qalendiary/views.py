@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Objetivo
 from .forms import ObjetivoForm, NewRegister
-
-
 # Create your views here.
 def dashboard(request):
     return render(request,'dashboard.html')
@@ -48,6 +46,11 @@ def registerView(request):
     
     return render(request,'registration/register.html',{'form':NewRegister})
 
-
 def calendarioView(request):
     return render(request,'calendario.html')
+
+def temporizadorView(request):
+    return render(request,'temporizador.html')
+
+
+

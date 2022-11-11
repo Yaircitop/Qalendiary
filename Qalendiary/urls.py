@@ -11,4 +11,5 @@ urlpatterns=[
     path('verobjetivos/',views.verobjetivo,name="verobjetivo"),
     path('',views.indexView,name="index"),
     path('borrarobjetivo/<int:pk>/',views.borrarobjetivo, name="borrarobjetivo"),
+    path('temporizador/',views.temporizadorView,name="temporizador"),
 ]

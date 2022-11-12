@@ -17,15 +17,45 @@ def subirobjetivo(request):
             return redirect("verobjetivo")
     else:
         form=ObjetivoForm()
-    return render(request, 'subirobjetivo.html',{
-        'form':form
+        try:
+            dia=request.GET["d"]
+            mes= request.GET["m"]
+            anio=request.GET["y"]
+            fecha=anio+'-'+mes+'-'+dia
+        except:
+            fecha='' 
+        return render(request, 'subirobjetivo.html',{
+        'form':form,
+        'fecha':fecha,
     })
 
 def verobjetivo(request):
-    lista_objetivo= Objetivo.objects.filter(usuario=request.user.id)
-    return render(request, 'verobjetivo.html', {
-        'lista_objetivo': lista_objetivo
-    })
+    try:
+        dia=request.GET["d"]
+        mes= request.GET["m"]
+        anio=request.GET["y"]
+        lista_objetivo= Objetivo.objects.filter(usuario=request.user.id,fecha_obj__day=dia, fecha_obj__month=mes, fecha_obj__year=anio)
+        return render(request, 'verobjetivo.html',{
+            'lista_objetivo': lista_objetivo,
+            'Hola':'confecha',
+            'dia':dia,
+            'mes':mes,
+            'anio':anio
+
+        })
+    except:
+        lista_objetivo= Objetivo.objects.filter(usuario=request.user.id)
+        return render(request, 'verobjetivo.html',{
+            'lista_objetivo': lista_objetivo,
+            'Hola':'sinfecha'
+        })
+    #print(dia)
+    #lista_objetivo= Objetivo.objects.filter(usuario=request.user.id,fecha='2022-10-')
+    #lista_objetivo= Objetivo.objects.filter(fecha__month=mes)
+    #return render(request, 'verobjetivo.html', {
+    #    'lista_objetivo': lista_objetivo,
+    #    'Hola':'paseeee'
+    #})
 
 def borrarobjetivo(request, pk):
     if request.method == "POST":

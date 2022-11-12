@@ -1,6 +1,7 @@
 {% load static %}
 
 {% block content %}
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,3 +33,13 @@
 	</div>
 </body>
 </html>
+=======
+<h1>Qalendiary</h1>
+<h2>Hola, {{user.username}}.</h2>
+<a href="{% url 'calendario' %}">Ver calendario</a>
+<a href="{% url 'logout' %}">Cerrar sesión</a>
+<a href="{% url 'verobjetivo' %}" class = "btn btn-primary">Ver objetivo</a>
+<img src="{% static 'relojito.jpg' %}">
+{% endblock %}
+
+>>>>>>> 66aa316152a5c27449e7d4e2bb2bd67025a42f72

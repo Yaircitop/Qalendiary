@@ -49,13 +49,6 @@ def verobjetivo(request):
             'lista_objetivo': lista_objetivo,
             'Hola':'sinfecha'
         })
-    #print(dia)
-    #lista_objetivo= Objetivo.objects.filter(usuario=request.user.id,fecha='2022-10-')
-    #lista_objetivo= Objetivo.objects.filter(fecha__month=mes)
-    #return render(request, 'verobjetivo.html', {
-    #    'lista_objetivo': lista_objetivo,
-    #    'Hola':'paseeee'
-    #})
 
 def borrarobjetivo(request, pk):
     if request.method == "POST":
@@ -81,3 +74,15 @@ def registerView(request):
 
 def calendarioView(request):
     return render(request,'calendario.html')
+
+def temporizadorView(request):
+    return render(request,'temporizador.html')
+
+def revisarobjetivo(request, pk):
+    objetivo = Objetivo.objects.get(pk=pk)
+    return render(request, 'revisarobjetivo.html', {
+        'objetivo':objetivo
+    })
+
+
+

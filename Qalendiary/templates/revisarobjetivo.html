@@ -1,0 +1,18 @@
+{% block content %}
+        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
+        <thead>
+            <tr>
+                <th id="objetivo">Objetivo</th>
+                <th id="fecha">Fecha de subida</th>
+                <th id="fecha_obj">Fecha de objetivo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ objetivo.objetivo }}</td>
+                <td>{{ objetivo.fecha }}</td>
+                <td>{{ objetivo.fecha_obj }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

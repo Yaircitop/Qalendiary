@@ -8,133 +8,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../static/plantillacalendar.css">
-<<<<<<< HEAD
-</head>
-<body>
-    <h1 id="calendario">Calendario</h1>
-    <div class="grid">
-        <div>
-            Dia 1
-=======
     <script src="{% static 'javascript/script2.js' %}" defer></script>
     <a href="{% url 'dashboard' %}" class = "btn btn-primary">Atrás</a>
-  </head>
-  <body>
-    <div class="contianer">
-      <div class="calendar">
-        <div class="calendar-header">
-          <span class="month-picker" id="month-picker"> May </span>
-          <div class="year-picker" id="year-picker">
-            <span class="year-change" id="pre-year">
-              <pre><</pre>
-            </span>
-            <span id="year">2020 </span>
-            <span class="year-change" id="next-year">
-              <pre>></pre>
-            </span>
+</head>
+<body>
+  <div class="contianer">
+    <div class="calendar">
+      <div class="calendar-header">
+        <span class="month-picker" id="month-picker"> May </span>
+        <div class="year-picker" id="year-picker">
+          <span class="year-change" id="pre-year">
+            <pre><</pre>
+          </span>
+          <span id="year">2020 </span>
+          <span class="year-change" id="next-year">
+            <pre>></pre>
+          </span>
+        </div>
+      </div>
+
+      <div class="calendar-body">
+        <div class="calendar-week-days">
+          <div>Dom</div>
+          <div>Lun</div>
+          <div>Mar</div>
+          <div>Mie</div>
+          <div>Jue</div>
+          <div>Vie</div>
+          <div>Sab</div>
+        </div>
+        <div class="calendar-days">
+        </div>
+      </div>
+      <div class="calendar-footer">
+      </div>
+      <div class="date-time-formate">
+        <div class="day-text-formate">HOY</div>
+        <div class="date-time-value">
+          <div>
+            <script>
+              var hoy= new Date()
+              var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+              document.write(hora)
+            </script>
           </div>
->>>>>>> 66aa316152a5c27449e7d4e2bb2bd67025a42f72
+          <div>
+            <script>
+              date = new Date().toLocaleDateString();
+              document.write(date);
+              </script>
+          </div>
         </div>
-
-        <div>
-            Día 2
-        </div>
-        <div>
-            Día 3
-        </div>
-
-        <div>
-            Día 4
-        </div>
-        <div>
-            Día 5
-        </div>
-        <div>
-            Día 6
-        </div>
-
-        <div>
-            Día 7
-        </div>
-        <div>
-            Día 8
-        </div>
-
-        <div>
-            Día 9
-        </div>
-        <div>
-            Día 10
-        </div>
-        <div>
-            Día 11
-        </div>
-
-        <div>
-            Día 12
-        </div>
-        <div>
-            Día 13
-        </div>
-
-        <div>
-            Día 14
-        </div>
-        <div>
-            Día 15
-        </div>
-        <div>
-            Día 16
-        </div>
-
-        <div>
-            Día 17
-        </div>
-        <div>
-            Día 18
-        </div>
-
-        <div>
-            Día 19
-        </div>
-        <div>
-            Día 20
-        </div>
-        <div>
-            Día 21
-        </div>
-
-        <div>
-            Día 22
-        </div>
-        <div>
-            Día 23
-        </div>
-
-        <div>
-            Día 24
-        </div>
-        <div>
-            Día 25
-        </div>
-        <div>
-            Día 26
-        </div>
-        <div>
-            Día 27
-        </div>
-
-        <div>
-            Día 28
-        </div>
-        <div>
-            Día 29
-        </div>
-
-        <div>
-            Día 30
-        </div>
+      </div>
+      <div class="month-list"></div>
     </div>
-
+  </div>
 </body>
 </html>

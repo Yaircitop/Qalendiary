@@ -1,0 +1,17 @@
+*.log
+*.pot
+.pyc
+pycache
+db.sqlite3
+
+# pyenv 
+.python-version 
+
+# Visual Studio Code # 
+.vscode/ 
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
+*.pyc

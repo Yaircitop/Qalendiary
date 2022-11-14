@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		$btnDetener = document.querySelector("#btnDetener"),
 		$minutos = document.querySelector("#minutos"),
 		$segundos = document.querySelector("#segundos"),
-		$contenedorInputs = document.querySelector("#contenedorInputs");
+		$contenedorInputs = document.querySelector("#contenedorInputs"),
+		$reloj1 = document.querySelector("#rel-norm"),
+		$reloj2 = document.querySelector("#rel-alarm");
 	let idInterval = null, diferenciaTemporal = 0,
 		fechaFuturo = null;
 	// Carga un sonido a través de su fuente y lo inyecta de manera oculta
@@ -35,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		mostrarElemento($btnPausar);
 		ocultarElemento($btnIniciar);
 		ocultarElemento($btnDetener);
+		mostrarElemento($reloj1);
+		ocultarElemento($reloj2);
 		if (fechaFuturo) {
 			fechaFuturo = new Date(new Date().getTime() + diferenciaTemporal);
 			diferenciaTemporal = 0;
@@ -50,11 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
 				sonido.play();
 				ocultarElemento($btnPausar);
 				mostrarElemento($btnDetener);
+				ocultarElemento($reloj1);
+				mostrarElemento($reloj2);
 			} else {
 				$tiempoRestante.textContent = milisegundosAMinutosYSegundos(tiempoRestante);
 			}
 		}, 50);
 	};
+
+	var fotoMostrada = "relojito-alarma.png"
+
+	function relojito(){
+		var elemento = document.getElementById("rel-norm");
+		elemento.src = "../../static/relojito-alarma.png";
+	}
 
 	const pausarTemporizador = () => {
 		ocultarElemento($btnPausar);
@@ -65,6 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const detenerTemporizador = () => {
+		ocultarElemento($reloj2);
+		ocultarElemento($reloj1);
 		clearInterval(idInterval);
 		fechaFuturo = null;
 		diferenciaTemporal = 0;

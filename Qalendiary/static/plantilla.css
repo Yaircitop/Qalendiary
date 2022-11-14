@@ -17,6 +17,10 @@ body {
     padding-top: 20px;
 }
 
+.sidenav img {
+    width: 250px;
+}
+
 
 .main {
     padding: 0px 10px;

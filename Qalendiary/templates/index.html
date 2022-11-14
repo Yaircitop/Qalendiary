@@ -16,17 +16,33 @@
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}">Salir</a></li>
                 {% else %}
-                    <li><a href="{% url 'login_url' %}">Ingresa</a></li>
-                    <li><a href="{% url 'register_url' %}">Regístrate</a></li>
+                    <li><a href="{% url 'login_url' %}" class="ingresa">Ingresa</a></li>
+                    <li><a href="{% url 'register_url' %}" class="registrate">Regístrate</a></li>
                 {% endif %}
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <div class="container side-collapse-container">
-      <div class="row">
-        <h1>Qalendiary</h1>
-        <p>Inicio de sesión</p>
+    <div class="fondo">
+      <div class="container side-collapse-container">
+          <div class="row">
+            <div class="cuadrito">
+              <h1>Qalendiary</h1>
+              <p><i>Tu progreso hacia el éxito</i></p>
+            </div>
+          </div>
+      </div>
+      <div class="side-bar">
+        <img src="../static/imagenes/menu.png" class="menu">
+  
+        <div class="social-links">
+          <img src="../static/imagenes/inst.png" alt="instagram">
+          <img src="../static/imagenes/fb.png" alt="Facebook">
+          <img src="../static/imagenes/tw.png" alt="Twitter">
+        </div>
+      </div>
+      <div class="nombre">
+        <small>Proporcionado por <br><span>Startup Project</span></small>
       </div>
     </div>

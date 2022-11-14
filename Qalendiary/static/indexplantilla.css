@@ -1,6 +1,23 @@
+@font-face {
+    font-family: letra-index;
+    src: url(../static/fonts/Cream\ Cake.otf);
+}
+
+@font-face {
+    font-family: letra-sbt;
+    src: url(../static/fonts/BLKCHCRY.TTF);
+}
+
+@font-face {
+    font-family: letra-party;
+    src: url(../static/fonts/Party\ Confetti.ttf);
+}
+
 body {
     padding-top: 50px;
     position: relative;
+    background-image: url(../static/imagenes/paisaje_2.jpg);
+    background-size: cover;
 }
 
 pre {
@@ -29,4 +46,76 @@ pre {
     .side-collapse.in {
         width:0;
     }
+}
+ .row h1 {
+    font-size: 150px;
+    font-family: letra-index;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+    color: #4e2345;
+ }
+
+ .row p {
+    font-size: 65px;
+    font-family: letra-sbt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #4e2345;
+ }
+
+ .cuadrito {
+    width: 100%;
+    padding: -10px 40px 40px;
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);  
+ }
+.ingresa, .registrate {
+    font-size: 25px;
+}
+.side-bar{
+    width: 70px;
+    height: 100vh;
+    background: linear-gradient(#688ab8, #472343);
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.menu{
+    display: block;
+    width: 50px;
+    margin: 70px auto 0;
+}
+
+.menu:hover {
+    cursor:pointer;
+}
+
+.nombre {
+    color: rgb(143, 143, 143);
+    font-size: 20px;
+    padding: 0 0 20px 20px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.nombre span {
+    color:#5987c9;
+    font-size:30px;
+    font-family: letra-party;
+}
+
+.social-links img{
+    width: 50px;
+    margin: 20px auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }

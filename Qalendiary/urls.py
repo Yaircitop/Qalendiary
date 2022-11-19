@@ -13,4 +13,5 @@ urlpatterns=[
     path('borrarobjetivo/<int:pk>/',views.borrarobjetivo, name="borrarobjetivo"),
     path('temporizador/',views.temporizadorView,name="temporizador"),
     path('revisarobjetivo/<int:pk>/',views.revisarobjetivo, name="revisarobjetivo"),
+    path('mostrarmensaje/',views.mostrarmensaje,name="mostrarmensaje"),
 ]

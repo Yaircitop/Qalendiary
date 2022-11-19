@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import Objetivo
+from .models import Objetivo, Mensaje
 from .forms import ObjetivoForm, NewRegister
-
+import random
 
 # Create your views here.
 def dashboard(request):
@@ -84,5 +84,11 @@ def revisarobjetivo(request, pk):
         'objetivo':objetivo
     })
 
-
+def mostrarmensaje(request):
+    num=random.randint(1,16)
+    print(num)
+    mensaje=Mensaje.objects.get(id=num)
+    return render(request, 'mostrarmensaje.html', {
+            'mensaje':mensaje
+    })
 

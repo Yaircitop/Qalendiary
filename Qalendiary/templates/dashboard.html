@@ -1,45 +1,61 @@
-{% load static %}
-
-{% block content %}
-
-<h1>Qalendiary</h1>
-<h2>Hola, {{user.username}}.</h2>
-<a href="{% url 'calendario' %}">Ver calendario</a>
-<a href="{% url 'verobjetivo' %}" class = "btn btn-primary">Ver objetivo</a>
-<a href="{% url 'logout' %}">Cerrar sesión</a>
-<img src="{% static 'relojito.jpg' %}">
-
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../static/popup.css">
-<script src="{% static 'javascript/scriptmodal.js' %}" defer></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../../static/dashplantilla.css">
+	<style>
+		h2{
+			text-align: center;
+		}
+	</style>
 </head>
-
 <body>
-<button id="myBtn">¿Sabías qué...?</button>
-<div id="myModal" class="modal">
+	    <h3>¿Te gusta estudiar y/o organizarte con música?</h3>
+		<h4>Con Qalendiary te proporcionamos algunos vídeos para ayudarte a la hora de concentrarte</h4>
+		<h2 style="color:rgb(255, 255, 255);">Qalendiary</h2>
+		<h2 style="color:rgb(255, 255, 255);">Hola, {{user.username}}</h2>
+		<!- Música ---->
+		<h11>[Lofi hip hop/chill beats]</h11>
+		<h6><iframe width="400" height="270" src="https://www.youtube.com/embed/lTRiuFIWV54?start=17" 
+		title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+		encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h6>
 
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>La gestión de tiempo.</h2>
-    </div>
-    <div class="modal-body">
-      <p>Esta puede aumentar la productividad, pero la mayor ventaja de la gestión eficaz del tiempo es la capacidad de establecer correctamente las prioridades en tu día para hacer espacio para el descanso y el cuidado personal.</p>
-      <h5><img class='relojito' src="{% static 'rectangulo(8).png' %}"></h5>
-    </div>
-    <div class="modal-footer">
-        <h2></h2>
-    </div>
-  </div>
-
+		<h7>[Anime openings lofi remix]</h7>
+		<h8><iframe width="400" height="270" src="https://www.youtube.com/embed/PNVncsHtL7c?start=1879" 
+		title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+		encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h8>
+		
+		<h9>[Instrumental anime music]</h9>
+		<h10><iframe width="400" height="270" src="https://www.youtube.com/embed/1wT3flPjQ2Y?start=312" 
+		title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+		encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h10>
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				<h1>Menú</h1>
+			</div>
+			<nav class="menu">
+				<a href="#">Inicio</a>
+				<a href="#">Nosotros</a>
+				<a href="#">Blog</a>
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="{% url 'calendario' %}">Ver calendario</a>
+			<a href="{% url 'verobjetivo' %}" class = "btn btn-primary">Ver objetivo</a>
+			<a href="{% url 'logout' %}">Cerrar sesión</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
 </div>
 
 </body>
-
 </html>
-{% endblock %}
-

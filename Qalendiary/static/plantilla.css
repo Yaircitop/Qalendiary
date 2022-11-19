@@ -19,6 +19,9 @@ body {
 
 .sidenav img {
     width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -76,4 +79,20 @@ body {
 .btn-black{
     background-color: #000 !important;
     color: #fff;
+}
+
+#titulo {
+    font-size: 12vh;
+    font-family: letra-index;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slogan{
+    font-size: 5vh;
+    font-family: letra-sbt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

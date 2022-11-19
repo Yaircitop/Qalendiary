@@ -73,3 +73,19 @@ body {
    background-color: rgb(42, 26, 220) !important;
    color: #fff;
 }
+
+#titulo {
+   font-size: 12vh;
+   font-family: letra-index;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#slogan{
+   font-size: 5vh;
+   font-family: letra-sbt;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

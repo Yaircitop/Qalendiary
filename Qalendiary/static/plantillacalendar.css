@@ -21,7 +21,7 @@
     position: relative;
     place-items: center;
     font-family: var(--font-family);
-    background:linear-gradient(to right, #9796f0, #fbc7d4);
+    background:linear-gradient(to right, #57567c, #9e6c78);
     z-index: -2;
     overflow: hidden;
   }

@@ -1,7 +1,16 @@
 {% block content %}
     {% block content1 %}
+    <link rel="stylesheet" href="../../static/objetivoplantilla.css">
+    <style>
+		h2{
+			text-align: center;
+		}
+        h3{
+            text-align: center
+        }
+	</style>
         <h2>Qalendiary</h2>
-        <p>
+        <h3>
             {% if Hola == "sinfecha" %}
             <a href="{% url 'subirobjetivo' %}" class = "btn btn-primary">Subir objetivo</a>
             {% else %}
@@ -9,9 +18,9 @@
             {% endif %}
             <a href="{% url 'calendario' %}" class = "btn btn-primary">Ver calendario</a>
             <a href="{% url 'mostrarmensaje' %}" class = "btn btn-primary">Click aquí si necesitas un empujón <3</a>
-        </p>
+        </h3>
     {% endblock %}
-        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc">
+        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc"> 
         <thead>
             <tr>
                 <th id="modelo">Objetivos</th>
@@ -33,6 +42,6 @@
                 </td>
             </tr>
         {% endfor %}
-    </tbody>
+    </tbody> 
 </table>
 {% endblock %}

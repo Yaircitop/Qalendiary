@@ -120,8 +120,8 @@
 		color: #fff;
 		transition: all 0.3s ease;
 		border-bottom: 2px solid transparent;
-		font-size: 15px;
-		margin-right: 5px;
+		font-size: 12px;
+		margin-right: 3px;
 	}
 	.container .menu a:hover{
 		border-bottom: 2px solid #c7c7c7;

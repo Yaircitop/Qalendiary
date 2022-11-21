@@ -1,47 +1,55 @@
 {% block content %}
     {% block content1 %}
-    <link rel="stylesheet" href="../../static/objetivoplantilla.css">
-    <style>
-		h2{
-			text-align: center;
-		}
-        h3{
-            text-align: center
-        }
-	</style>
-        <h2>Qalendiary</h2>
-        <h3>
-            {% if Hola == "sinfecha" %}
-            <a href="{% url 'subirobjetivo' %}" class = "btn btn-primary">Subir objetivo</a>
-            {% else %}
-            <a href="../subirobjetivo?d={{dia}}&m={{mes}}&y={{anio}}" class = "btn btn-primary">Subir objetivo</a>
-            {% endif %}
-            <a href="{% url 'calendario' %}" class = "btn btn-primary">Ver calendario</a>
-            <a href="{% url 'mostrarmensaje' %}" class = "btn btn-primary">Click aquí si necesitas un empujón <3</a>
-        </h3>
-    {% endblock %}
-        <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc"> 
-        <thead>
-            <tr>
-                <th id="modelo">Objetivos</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for Objetivo in lista_objetivo %}
-            <tr>
-                <td><a href = "{% url 'revisarobjetivo' Objetivo.pk %}">{{ Objetivo.objetivo }}</a></td>
-                <td>
-                    <form method="POST" action="{% url 'borrarobjetivo' Objetivo.pk %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Eliminar</button>
-                    </form>
-                    <form method="POST" action="{% url 'temporizador' %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Temporizador</button>
-                    </form>
-                </td>
-            </tr>
-        {% endfor %}
-    </tbody> 
-</table>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ver Objetivos</title>
+        <link rel="stylesheet" href="../../static/objetivoplantilla.css">
+    </head>
+    <body>
+        <div class="botoncito">
+            <a href="{% url 'dashboard' %}" class = "atras">
+            <button class="button-56" role="button">Atrás</button>
+            </a> 
+        </div>
+            <h2>Qalendiary</h2>
+            <h3>
+                {% if Hola == "sinfecha" %}
+                <a href="{% url 'subirobjetivo' %}" class = "btn btn-primary">Subir objetivo</a>
+                {% else %}
+                <a href="../subirobjetivo?d={{dia}}&m={{mes}}&y={{anio}}" class = "btn btn-primary">Subir objetivo</a>
+                {% endif %}
+                <a href="{% url 'calendario' %}" class = "btn btn-primary">Ver calendario</a>
+                <a href="{% url 'mostrarmensaje' %}" class = "btn btn-primary">Click aquí si necesitas un empujón <3</a>
+            </h3>
+        {% endblock %}
+            <table class="table table-striped table-bordered dt-responsive nowrap" cellspacing="10" aria-describedby="mydesc"> 
+            <thead>
+                <tr>
+                    <th id="modelo">Objetivos:</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for Objetivo in lista_objetivo %}
+                    <tr>
+                        <td>
+                            <ul><li><a id="objetivos" href = "{% url 'revisarobjetivo' Objetivo.pk %}">{{ Objetivo.objetivo }}</a></li></ul></td>
+                        <td>
+                            <form method="POST" action="{% url 'borrarobjetivo' Objetivo.pk %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
+                            <form method="POST" action="{% url 'temporizador' %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Temporizador</button>
+                            </form>
+                        </td>
+                    </tr>
+            {% endfor %}
+        </tbody> 
+    </table>  
+    </body>
+    </html>
 {% endblock %}

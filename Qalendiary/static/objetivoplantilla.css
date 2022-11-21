@@ -22,13 +22,16 @@ table {
 }
 
 tbody {
-    background-color: aqua;
+    background-color:#ffdeda;
 }
 
 #objetivos {
     margin: 0;
     padding: 0;
+    font-size: 2vh;
 }
+
+
 
 .atras {
     font-size: 3vh;

@@ -35,16 +35,18 @@
                     {% for Objetivo in lista_objetivo %}
                     <tr>
                         <td>
-                            <ul><li><a id="objetivos" href = "{% url 'revisarobjetivo' Objetivo.pk %}">{{ Objetivo.objetivo }}</a></li></ul></td>
-                        <td>
-                            <form method="POST" action="{% url 'borrarobjetivo' Objetivo.pk %}">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
-                            <form method="POST" action="{% url 'temporizador' %}">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">Temporizador</button>
-                            </form>
+                            <ul><a id="objetivos" href = "{% url 'revisarobjetivo' Objetivo.pk %}">{{ Objetivo.objetivo }}</a>
+                                <li>
+                                <form method="POST" action="{% url 'borrarobjetivo' Objetivo.pk %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                                <form method="POST" action="{% url 'temporizador' %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Temporizador</button>
+                                </form>
+                                </li>
+                            </ul>
                         </td>
                     </tr>
             {% endfor %}

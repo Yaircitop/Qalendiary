@@ -89,3 +89,10 @@ body {
    justify-content: center;
    align-items: center;
 }
+
+.sidenav img {
+   width: 350px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}

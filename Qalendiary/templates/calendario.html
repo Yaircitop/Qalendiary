@@ -52,7 +52,7 @@
           <div>
             <script>
               var hoy= new Date()
-              var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+              var hora = ('0' + hoy.getHours()).slice(-2) + ':' + ('0' + hoy.getMinutes()).slice(-2) + ':' + ('0' + hoy.getSeconds()).slice(-2);
               document.write(hora)
             </script>
           </div>

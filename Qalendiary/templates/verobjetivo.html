@@ -29,7 +29,7 @@
                     <a href="{% url 'calendario' %}" class = "btn-btn-primary">
                         <span>Ver calendario </span>
                     </a>
-                    <a id="frase" href="{% url 'mostrarmensaje' %}" class = "btn-btn-primary">
+                    <a id="frase" href="{% url 'mostrarmensaje' %}" class = "btn-btn-primary" onclick="openPopup()">
                         <span>Click aquí si necesitas un empujón ❤</span>
                     </a>
                 </div>
@@ -61,7 +61,7 @@
                     </tr>
             {% endfor %}
         </tbody> 
-    </table>  
+    </table>
     </body>
     </html>
 {% endblock %}

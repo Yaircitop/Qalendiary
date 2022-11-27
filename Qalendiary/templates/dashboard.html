@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../../static/dashplantilla.css">
+	<script src="../../static/javascript/scriptmodal.js" defer></script>
 	<style>
 		h2{
 			text-align: center;
 		}
-	</style>
+	</style>	
 </head>
 <body>
 	    <h3>¿Te gusta estudiar y/u organizarte con música?</h3>
@@ -55,6 +56,24 @@
 		<label for="btn-menu">✖️</label>
 	</div>
 </div>
-
+<h15>
+	<button id="myBtn" class="button-56" role="button">Presioname...</button>
+</h15>
+	<div id="myModal" class="modal">	
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <span class="close">&times;</span>
+		  <h20 style="text-align:center">¡Hola {{user.username}}!</h20>
+		</div>
+		<div class="modal-body">
+		  <h21>Soy Relojito, de Relojlandia, un planeta donde todo tiene su tiempo perfectamente establecido. Veo que necesitas ayuda,
+			así que te acompañaré a organizarte para sacarle el mayor partido a tu tiempo. ¡Empecemos!
+		  </h21>
+		  <h22><img class='relojito' src="../../static/rectangulo(8).png"></h22>
+		</div>
+		<div class="modal-footer">
+		</div>
+	  </div>
+	</div>
 </body>
 </html>

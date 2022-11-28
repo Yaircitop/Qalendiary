@@ -101,7 +101,11 @@
 	h21{
 		font-size: 1.2em;
 		text-align: center;
-	}			
+	}
+	h24{
+		font-size: 1.3em;
+		text-align: center;
+	}		
 	/*Estilos para el encabezado*/
 	.header{
 		width: 100%;

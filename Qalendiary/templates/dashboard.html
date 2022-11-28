@@ -57,7 +57,7 @@
 	</div>
 </div>
 <h15>
-	<button id="myBtn" class="button-56" role="button">Presioname...</button>
+	<button id="myBtn" class="button-56" role="button">¿Necesitas un empujón?</button>
 </h15>
 	<div id="myModal" class="modal">	
 	  <div class="modal-content">
@@ -66,14 +66,16 @@
 		  <h20 style="text-align:center">¡Hola {{user.username}}!</h20>
 		</div>
 		<div class="modal-body">
-		  <h21>Soy Relojito, de Relojlandia, un planeta donde todo tiene su tiempo perfectamente establecido. Veo que necesitas ayuda,
-			así que te acompañaré a organizarte para sacarle el mayor partido a tu tiempo. ¡Empecemos!
+		  <h21>¡Wow! Veo que te estas esforzando mucho por tus metas, te dejo un pequeño mensaje para que sigas adelante:
 		  </h21>
-		  <h22><img class='relojito' src="../../static/rectangulo(8).png"></h22>
+		  <br>
+		  <h24>"{{ mensaje.mensaje }}"</h24>
+		  <h22><img class='relojito' src="../../static/relojito-chico.png"></h22>
 		</div>
 		<div class="modal-footer">
 		</div>
 	  </div>
 	</div>
+
 </body>
 </html>

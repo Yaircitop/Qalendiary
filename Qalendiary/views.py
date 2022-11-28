@@ -6,6 +6,7 @@ import random
 # Create your views here.
 def dashboard(request):
     return render(request,'dashboard.html')
+    
 
 def subirobjetivo(request):
     if request.method=="POST":
@@ -91,4 +92,10 @@ def mostrarmensaje(request):
     return render(request, 'mostrarmensaje.html', {
             'mensaje':mensaje
     })
-
+def dashboard(request):
+    num=random.randint(1,16)
+    print(num)
+    mensaje=Mensaje.objects.get(id=num)
+    return render(request, 'dashboard.html', {
+                'mensaje':mensaje
+            })

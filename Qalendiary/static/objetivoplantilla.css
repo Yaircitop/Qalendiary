@@ -165,3 +165,9 @@ tbody {
 .btn-btn-primary:hover:after{
   width: 100%;
 }
+
+#relojito-verobj {
+  width: 350px;
+  height: 350px;
+  transform: translate(140vh,-65vh);
+}
